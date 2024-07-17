@@ -20,3 +20,4 @@ C:\Users\Cenouriita\source\repos\Teste_desenvolvimento\Teste_desenvolvimento\obj
 C:\Users\Cenouriita\source\repos\Teste_desenvolvimento\Teste_desenvolvimento\obj\Debug\net8.0-windows\Teste_desenvolvimento.pdb
 C:\Users\Cenouriita\source\repos\Teste_desenvolvimento\Teste_desenvolvimento\obj\Debug\net8.0-windows\Teste_desenvolvimento.genruntimeconfig.cache
 C:\Users\Cenouriita\source\repos\Teste_desenvolvimento\Teste_desenvolvimento\obj\Debug\net8.0-windows\ref\Teste_desenvolvimento.dll
+C:\Users\Cenouriita\source\repos\Teste_desenvolvimento\Teste_desenvolvimento\obj\Debug\net8.0-windows\Teste_desenvolvimento.sourcelink.json

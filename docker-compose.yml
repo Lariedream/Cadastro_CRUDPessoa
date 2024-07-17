@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+    db:
+        image: postgres:12.19
+        container_name: 'postgresql'
+        ports: 
+            - "54320:5432"
+        environment:
+            POSTGRES_PASSWORD: 1q2w3e4r5t
+            POSTGRES_DB: cadastro_pessoa
+            POSTGRES_USER: postgres
+        volumes:
+          - ./Database/postgres:/var/lib/postgresql
+          - ./Database/Cadastro_pessoa.sql:/docker-entrypoint-initdb.d/init.sql
+        networks:
+            - default
+networks:
+    default:
+        driver: bridge

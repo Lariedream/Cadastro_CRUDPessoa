@@ -5,7 +5,7 @@
 -- Dumped from database version 16.3
 -- Dumped by pg_dump version 16.3
 
--- Started on 2024-07-17 15:15:51
+-- Started on 2024-07-17 19:01:16
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -55,7 +55,7 @@ SET default_table_access_method = heap;
 
 CREATE TABLE public.log_operacoes (
     id integer NOT NULL,
-    data_hora timestamp without time zone DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    data_hora timestamp with time zone DEFAULT CURRENT_TIMESTAMP NOT NULL,
     tipo_operacao character varying(10) NOT NULL,
     dados jsonb
 );
@@ -152,7 +152,6 @@ ALTER TABLE ONLY public.pessoa ALTER COLUMN id SET DEFAULT nextval('public.pesso
 --
 
 COPY public.log_operacoes (id, data_hora, tipo_operacao, dados) FROM stdin;
-38	2024-07-17 14:16:11.62899	DELETE	{"id": 21, "cpf": "5154154515", "nome": "Teste", "telefone": 51515166}
 \.
 
 
@@ -172,7 +171,7 @@ COPY public.pessoa (id, nome, cpf, telefone) FROM stdin;
 -- Name: log_operacoes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.log_operacoes_id_seq', 38, true);
+SELECT pg_catalog.setval('public.log_operacoes_id_seq', 44, true);
 
 
 --
@@ -181,7 +180,7 @@ SELECT pg_catalog.setval('public.log_operacoes_id_seq', 38, true);
 -- Name: pessoa_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.pessoa_id_seq', 21, true);
+SELECT pg_catalog.setval('public.pessoa_id_seq', 24, true);
 
 
 --
@@ -235,7 +234,7 @@ CREATE TRIGGER cadastro_after_insert AFTER INSERT ON public.pessoa FOR EACH ROW 
 CREATE TRIGGER cadastro_after_update AFTER UPDATE ON public.pessoa FOR EACH ROW EXECUTE FUNCTION public.log_operacoes_trigger();
 
 
--- Completed on 2024-07-17 15:15:51
+-- Completed on 2024-07-17 19:01:17
 
 --
 -- PostgreSQL database dump complete

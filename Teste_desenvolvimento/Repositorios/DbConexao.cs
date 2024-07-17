@@ -14,7 +14,7 @@ namespace Teste_desenvolvimento.Repositorios
 
         public DbConexao()
         {
-            connection = new NpgsqlConnection("Server=127.0.0.1 ; Port=5432; Database= cadastro_pessoa ; User Id= postgres ; Password= Jujubas2 ");
+            connection = new NpgsqlConnection("Server=127.0.0.1 ; Port=54320; Database= cadastro_pessoa ; User Id= postgres ; Password= 1q2w3e4r5t ");
         }
 
         public IDbConnection GetConnection()
