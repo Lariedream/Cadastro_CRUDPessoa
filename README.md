@@ -11,6 +11,7 @@ Meu projeto utiliza o banco de dados PostgreSQL e é desenvolvido em C# utilizan
 Para executar este projeto, você precisa ter as seguintes dependências instaladas:
 
 - Npgsql: Biblioteca para acesso ao banco de dados PostgreSQL em C#.
+- Dapper: Micro ORM para facilitar a interação com o banco de dados.
 
 ## Instalação
 Para usar este projeto, siga estas etapas:
